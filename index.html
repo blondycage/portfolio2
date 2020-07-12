@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+    <link rel="stylesheet" href="svg.css" />
+    <title>ABDUL</title>
+  </head>
+  <body>
+   
+    <div id="hamburger">&#9776</div>
+    <nav id="sidebar">
+        <div class="container">
+            <img src="/static/logo.png" width="280" height="280" />
+            <div class="flexlinks"> <a href="#">landing</a>
+                <a href="#">portfolio</a>
+               
+                <a href="#">Hire me?</a>
+                <a href="#">CV</a><p class="cp-text">
+                    © Copyright 2020 Abdulshehu.
+                </p>
+           
+        </div>
+      
+      
+      </nav>
+    <div class="topnav">
+        <img src="/static/logo.png" width="80" height="80" />
+      <a href="#">landing</a>
+      <a href="#">portfolio</a>
+     
+      <a href="#">Hire me?</a>
+      <a href="#">CV</a>
+    </div>
+    <div>
+      <div class="svgbg">
+        <div class="svgitems">
+          <div class="avatar"></div>
+          <h1>HI THERE</h1>
+          <h3>I AM ABDUL, AN ASPIRING <br /><span class="span"></span></h3>
+          <p>
+            “First, solve the problem. Then, write the code.” – John Johnson '
+          </p>
+        </div>
+      </div>
+    </div>
+    <script >
+        const hamburger = document.getElementById("hamburger");
+
+hamburger.addEventListener("click", () => {
+    
+  sidebar.classList.toggle("open");
+});
+
+    </script>
+  </body>
+</html>
