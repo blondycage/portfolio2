@@ -2,6 +2,10 @@
 * {
   margin: 0;
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+body h1,h2,h3,h4,p,h5{
+  overflow: hidden;
 }
 .svgbg {
   position: relative;
@@ -41,8 +45,8 @@
   height: 100px;
   background-color: transparent;
   z-index: 10000;
- 
- animation: fadein  4s ease;
+
+  animation: fadein 4s ease;
 }
 .topnav a {
   text-decoration: none;
@@ -81,6 +85,7 @@ h1 {
 }
 h3 {
   font-size: 2.5em;
+  overflow: hidden;
 }
 .span:before {
   content: "";
@@ -88,13 +93,134 @@ h3 {
   animation: changetext infinite 8s;
   font-size: 1em;
 }
+.viewwork {
+  color: aliceblue;
+  text-align: center;
+  padding: 20px;
+  border:3px solid whitesmoke;
 
+  z-index: 200000px;
+}
+.work1,
+.work3 {
+  max-width: 300px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1.5s all ease-in;
+  overflow: hidden;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  line-height: 30px;
+}
+.work2 {
+  max-width: 300px;
+  opacity: 0;
+  transform: translatex(-20px);
+  transition: 1.5s all ease-in;
+  overflow: hidden;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  line-height: 30px;
+}
+.workcontainer {
+  overflow: hidden;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: #252a32;
+}
+.footer a {
+  margin: 10px;
+  color: rgb(243, 86, 38);
+}
+.drawer{
+  display: flex;
+  flex-direction: column;
+background-color: #252a32;
+color: white;
+align-content: center;
+text-align: center;
+height: 100vh;
+
+}
+.drawer i{
+margin-right: 10px;
+
+}
+.ref{
+  text-align: left;
+  padding-left: 15px;
+}
+.drawer *{
+  margin-top: 5px ;
+  overflow: hidden;
+}
+.drawer img{
+  margin-top: 25px;
+  border-radius: 50%;
+}
+.drawer ,.personal{
+  margin: 0 auto;
+}
+.badge{
+  background-color:#000000 ;
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  border-radius: 10px;
+}
+.sectionprofile{
+  text-align: left;
+  line-height: 20px;
+}
+.sectionprofile h1{
+  font-family: 'Courier New', Courier, monospace;
+}
+.sectionprofile p{
+  max-width: 600px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.col,.s6{
+  text-align: center;
+}
+.webdevbarcontainer,.uibarcontainer{
+  width: 100%;
+  background-color:rgb(109, 109, 109);
+}
+.webdevbar,.uidevbar{
+  background-color: rgb(243, 86, 38);
+  width: 0%;
+}
+.skills{
+  display: flex;
+  flex-direction: column;
+
+}
+.skills *{
+  margin-top: 5px;
+}
+.workcontainer i {
+  margin-right: 10px;
+}
+.workcontainer a {
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: lowercase;
+  color: #252a3291;
+}
+.fadeup {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.slideleft {
+  opacity: 1;
+  transform: translateX(0px);
+}
 #sidebar {
-  width:250px;
+  width: 250px;
   position: fixed;
-  top:0;
-  left:0;
-  height:100vh;
+  top: 0;
+  left: 0;
+  height: 100vh;
   background-color: #252a32;
   color: white;
   padding: 30px 20px;
@@ -106,7 +232,31 @@ h3 {
   opacity: 0.99;
   z-index: 2000;
 }
-
+.slidein {
+  animation: slide 0.7s ease-in;
+}
+.badges{
+  display: flex;
+  flex-wrap: wrap;
+}
+#portfolio {
+  display: flex;
+  flex-direction: column;
+  margin: 25px auto;
+  max-width: 800px;
+  align-content: center;
+  filter: grayscale(100%);
+}
+.items {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.212);
+}
+.items:hover{
+  transform: translateY(-10px);
+}
 .logotitle {
   font-size: 2em;
   margin: auto 0;
@@ -117,29 +267,86 @@ h3 {
   z-index: 100;
   position: absolute;
   top: 3px;
-color: white;
+  color: white;
 }
-.flexlinks{
+.flexlinks {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
 }
-.container{
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.container img{
+.container img {
   margin: 0 auto;
 }
-.flexlinks a{
-  color:white;
+.flexlinks a {
+  color: white;
   text-transform: uppercase;
-text-decoration: none;
-margin-bottom: 15px;
-text-align: center;
-  
+  text-decoration: none;
+  margin-bottom: 15px;
+  text-align: center;
 }
+.arrow {
+  margin-top: 10px;
+  animation: updown 1s ease-in-out infinite;
+}
+#particles-js {
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.particles-js-canvas-el {
+  position: absolute;
+  height: 100vh;
+}
+.input,.message{
+  background-color: transparent;
+  color: white;
+  border:1px solid rgba(109, 109, 109, 0.226);
+  border-radius: 0%;
+  height: 50px;
+  width:500px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1em;
+  margin: 0 auto;
+}
+.contactinput{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.message{
+  margin-top: 10px;
+  height: 150px;
+}
+button{
+  max-width: 80px;
+  margin: 0 auto;
+  background: none;
+  color: white;
+  border: 1px solid rgb(243, 86, 38); 
+  padding: 5px;
+  margin-top: 5px;
+  text-align: center;
+}
+.contact{
+  
+  margin-top: 30px;
+  color: rgb(243, 86, 38);
+
+}
+
 @media screen and (max-width: 800px) {
   .avatar {
     width: 250px;
@@ -152,7 +359,7 @@ text-align: center;
     font-size: 1.5em;
   }
   h3 {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
   #hamburger:hover {
     cursor: pointer;
@@ -163,7 +370,11 @@ text-align: center;
     animation: changetext infinite 8s ease-out;
     font-size: 1em;
   }
-  .topnav{
+  #particles-js {
+    width: 100vw;
+    height: 50vh;
+  }
+  .topnav {
     display: none;
   }
   #hamburger {
@@ -174,15 +385,28 @@ text-align: center;
   }
   #sidebar {
     display: block;
-    width: 100vw; 
+    width: 100vw;
     transform: translateX(-1000px);
     transition: 500ms transform;
   }
-  .cp-text{ color: rgba(255, 255, 255, 0.7); text-shadow: 0 1px rgba(255, 255, 255, 0.1);}
-  
+  .cp-text {
+    color: rgba(255, 255, 255, 0.7);
+    text-shadow: 0 1px rgba(255, 255, 255, 0.1);
+  }
+
   #sidebar.open {
     transform: translateX(0);
   }
+  .items{
+    flex-direction: column-reverse;
+    margin: 0 auto;
+  }
+  .items>img{
+    margin:0 auto
+  }
+.input,.message{
+  width:250px;
+}
 }
 @keyframes changetext {
   0% {
@@ -198,9 +422,29 @@ text-align: center;
     content: "ENTEPRENEUR";
   }
 }
+@keyframes slide {
+  0% {
+    transform: translateX(-2000px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes updown {
+  0% {
+    transform: translateY(-5px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 @keyframes fadein {
   0% {
-   opacity: 0;
+    opacity: 0;
   }
   30% {
     opacity: 0.4;
@@ -210,5 +454,5 @@ text-align: center;
   }
   100% {
     opacity: 1;
-}
+  }
 }
